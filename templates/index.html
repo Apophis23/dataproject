@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>Complaint Filtering</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../assets/icons8-complaint-16.png"/>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../static/css/styles.css" rel="stylesheet"/>
+    <!-- Jquery 사용 -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- 구글 icon 사용-->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0"/>
+
+
+</head>
+
+<body id="page-top">
+<!-- Navigation bar-->
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="#page-top">Complaint Filtering</a>
+        <button class="navbar-toggler text-uppercase font-weight-bold text-white rounded" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#input_complaint">Input
+                    Complaint</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
+                                                     href="#result">Result</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- first page-->
+<header class="masthead bg-primary text-navy text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <!-- first page Avatar Image-->
+        <img class="masthead-avatar mb-5" src="https://www.gangdong.go.kr/assets/images/office/img_2019_icon07.gif"
+             alt="..."/>
+        <!-- fist page Heading-->
+        <h1 class="masthead-heading text-uppercase mb-0">Complaint Filtering</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- first page Subheading-->
+        <p class="masthead-subheading font-weight-light mb-0">complaint Filtering site</p>
+    </div>
+</header>
+
+<!-- About Section-->
+<section class="page-section text-navy mb-0" id="about">
+    <div class="container">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-navy">About</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light text-navy">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- About Section Content-->
+        <div class="row">
+            <div class="col-lg-4 ms-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start
+                Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well
+                as optional SASS stylesheets for easy customization.</p></div>
+            <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change
+                the icon in the dividers, and add your email address to the result form to make it fully functional!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Input complaint Section-->
+<section class="page-section" id="input_complaint">
+    <div class="container">
+        <!-- Input complaint Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Input Complaint</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Input complaint Section Form-->
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+                <form id="inputForm" method="POST" , action="/">
+                    <!-- Message input-->
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" id="message" type="text" name="message"
+                                  placeholder="Enter your message here..."
+                                  style="height: 35rem" data-sb-validations="required"></textarea>
+                        <label for="message">Message</label>
+                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                    </div>
+
+                    <!-- Submit Button-->
+                    <button class="btn_second btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Result Section-->
+<section class="page-section" id="result">
+    <div class="container">
+        <!-- Result Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Result</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <div class = "result_warning text-secondary"> <b>전송하기전 박스를 클릭하여 수정된 내용을 최종적으로 확인하여 주세요!</b></div>
+        <!-- Result Section Form-->
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+                <form id="resultForm" data-sb-form-api-token="API_TOKEN">
+                    <!-- Message input-->
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control filteredMessage" id="message" type="text" placeholder="Enter your message here..."
+                                  style="height: 35rem" data-sb-validations="required" readonly></textarea>
+                        <label for="message">Message</label>
+                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                    </div>
+
+                    <!-- Submit success message-->
+                    <div class="d-none" id="submitSuccessMessage">
+                        <div class="text-center mb-3">
+                            <div class="fw-bolder">민원이 성공적으로 접수되었습니다!</div>
+                            민원을 확인하려면 아래 링크로 접속해 주세요!
+                            <br/>
+                            <a href="https://www.epeople.go.kr/nep/crtf/userLogn.npaid?returnUrl=%2Fnep%2FutilHistory%2Fuser%2FMySmgMain.paid">국민
+                                신문고 이동</a>
+                        </div>
+                    </div>
+
+                    <!-- Submit error message-->
+                    <div class="d-none" id="submitErrorMessage">
+                        <div class="text-center text-danger mb-3">Error sending message!</div>
+                    </div>
+                    <!-- Submit Button-->
+                    <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+                    <button class="btn btn-third btn-xl" id="RewriteButton" type="submit">Rewrite</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- modal-->
+<div id="first_modal" class="modal_overlay">
+    <div class="modal_window">
+        <div style="display: flex; flex-direction: row; justify-content: space-between; ">
+            <div style="width: 40px;"></div>
+            <div class="text-secondary" style="font-size: 20px; font-weight: bold">민원 처리중.....</div>
+            <div><span class="material-symbols-outlined btn_close" style="cursor: pointer">close</span></div>
+        </div>
+        <div class="img_upload" style="width: 774px; height: 534px; margin-top: 10px; border-top: solid 1px lightgray">
+            <div>
+                <img class="modal_image" src="https://devtalk.kakao.com/uploads/default/original/2X/8/8d3426581b592b46157de64b919d4378b504d346.gif">
+            </div>
+            <div class="text-secondary" id="first_modal_div"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer-->
+<footer class="footer text-center">
+    <div class="container">
+        <div class="row">
+            <!-- Footer Location-->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Made By</h4>
+                <p class="lead mb-0">
+                    데이터 청년 캠퍼스 13조
+                </p>
+            </div>
+            <!-- Footer Social Icons-->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+                <h4 class="text-uppercase mb-4">Contact Us</h4>
+                <a class="btn btn-outline-light btn-social mx-1" href="https://ko-kr.facebook.com/"><i
+                        class="fab fa-fw fa-facebook-f"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/?lang=ko"><i
+                        class="fab fa-fw fa-twitter"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/"><i
+                        class="fab fa-instagram"></i></a>
+                <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/"><i
+                        class="fab fa-github"></i></a>
+            </div>
+            <!-- Footer About Text-->
+            <div class="col-lg-4">
+                <h4 class="text-uppercase mb-4">Using</h4>
+                <p class="lead mb-0">
+                    Using MIT license, Bootstrap, <br>
+                    HTML, CSS, JavaScript
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Copyright Section-->
+<div class="copyright py-4 text-center text-white">
+    <div class="container"><small>Copyright &copy; Project Website 2023</small></div>
+</div>
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="../static/js/scripts.js"></script>
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>
