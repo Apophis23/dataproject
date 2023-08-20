@@ -40,10 +40,9 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a>
                 </li>
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#input_complaint">Input
-                    Complaint</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#input_complaint">민원입력</a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
-                                                     href="#result">Result</a></li>
+                                                     href="#result">결과</a></li>
             </ul>
         </div>
     </div>
@@ -56,7 +55,7 @@
         <img class="masthead-avatar mb-5" src="https://www.gangdong.go.kr/assets/images/office/img_2019_icon07.gif"
              alt="..."/>
         <!-- fist page Heading-->
-        <h1 class="masthead-heading text-uppercase mb-0">Complaint Filtering</h1>
+        <h1 class="masthead-heading text-uppercase mb-0">민원 필터링 서비스</h1>
         <!-- Icon Divider-->
         <div class="divider-custom divider-light">
             <div class="divider-custom-line"></div>
@@ -64,7 +63,7 @@
             <div class="divider-custom-line"></div>
         </div>
         <!-- first page Subheading-->
-        <p class="masthead-subheading font-weight-light mb-0">complaint Filtering site</p>
+        <p class="masthead-subheading font-weight-light mb-0">사용자의 민원의 목적을 분류하고 필터링해주는 서비스</p>
     </div>
 </header>
 
@@ -81,8 +80,9 @@
         </div>
         <!-- About Section Content-->
         <div class="row">
-            <div class="col-lg-4 ms-auto"><p class="lead">민원 필터링 서비스는 악성 민원으로부터 고통받는 공무원을 보호하기 위해 만
-                들어진 서비스 입니다. 민원 필터링 서비스에서는 3단계의 필터를 거쳐 민원의 목적을 파악하고, 민원의 욕설 및 악성 여부를 확인한
+            <div class="col-lg-4 ms-auto" style="text-align: left"><p class="lead">민원 필터링 서비스는 악성 민원으로부터 고통받는 공무원을 보호하기 위해 만
+                들어진 서비스 입니다. <br>
+                민원 필터링 서비스에서는 3단계의 필터를 거쳐 민원의 목적을 파악하고, 민원의 욕설 및 악성 여부를 확인한
                 뒤, 이를 재생성 한뒤, 민원 사이트로 민원을 전송합니다.</p></div>
             <div class="col-lg-4 me-auto" style="text-align: left"><p class="lead">
                 첫 번째 필터는 민원의 목적을 파악합니다. <br><br>
@@ -97,7 +97,7 @@
 <section class="page-section" id="input_complaint">
     <div class="container">
         <!-- Input complaint Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Input Complaint</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">민원 입력</h2>
         <!-- Icon Divider-->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -113,12 +113,12 @@
                         <textarea class="form-control" id="message" type="text" name="message"
                                   placeholder="Enter your message here..."
                                   style="height: 35rem" data-sb-validations="required"></textarea>
-                        <label for="message">Message</label>
-                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                        <label for="message">민원을 입력해 주세요.....</label>
+                        <div class="invalid-feedback" data-sb-feedback="message:required">민원의 내용이 없습니다</div>
                     </div>
 
                     <!-- Submit Button-->
-                    <button class="btn_second btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+                    <button class="btn_second btn-primary btn-xl disabled" id="submitButton" type="submit">전송</button>
                 </form>
             </div>
         </div>
@@ -129,7 +129,7 @@
 <section class="page-section" id="result">
     <div class="container">
         <!-- Result Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Result</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">필터링 결과</h2>
         <!-- Icon Divider-->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -145,8 +145,8 @@
                     <div class="form-floating mb-3">
                         <textarea class="form-control filteredMessage" id="message" type="text" placeholder="Enter your message here..."
                                   style="height: 35rem" data-sb-validations="required" readonly></textarea>
-                        <label for="message">Message</label>
-                        <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                        <label for="message">필터링이 완료되면 결과가 표시됩니다...</label>
+                        <div class="invalid-feedback" data-sb-feedback="message:required">결과가 존재하지 않습니다.</div>
                     </div>
 
                     <!-- Submit success message-->
@@ -165,8 +165,8 @@
                         <div class="text-center text-danger mb-3">Error sending message!</div>
                     </div>
                     <!-- Submit Button-->
-                    <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
-                    <button class="btn btn-third btn-xl" id="RewriteButton" type="submit">Rewrite</button>
+                    <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">전송</button>
+                    <button class="btn btn-third btn-xl" id="RewriteButton" type="submit">재작성</button>
                 </form>
             </div>
         </div>

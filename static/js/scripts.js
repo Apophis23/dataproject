@@ -84,8 +84,13 @@ $(document).ready(function () {
             success: function (filter1_result) {
                 if (filter1_result.status === "no") {
                     sleep(3000);
-                    $("#first_modal_div").text("본 민원의 목적을 판단하기 힘들거나/부적절한 목적으로 보입니다.");
-                    $("#first_modal").fadeOut();
+                    $('.modal_image').attr('src', 'https://item.kakaocdn.net/do/c5c470298d527ef65eb52883f0f186c48b566dca82634c93f811198148a26065');
+                    $("#first_modal_div").text("본 민원의 목적을 판단하기 힘들거나/부적절한 목적으로 보입니다. 3초뒤 화면이 종료됩니다.");
+                    setTimeout(function (){
+                        $("#first_modal").fadeOut();
+                        location.reload();
+                    }, 3000);
+
                 } else {
                     sleep(3000);
                     $("#first_modal_div").text("본 민원은 " + filter1_result.category + "과 관련된 민원으로 보입니다. 관련과로 전달해드리기 전에 잠시 살펴보겠습니다.");
@@ -97,7 +102,7 @@ $(document).ready(function () {
                         contentType: "application/json",
                         data: JSON.stringify({message: user_complaint}),
                         success: function (filter2_result) {
-                            $("#first_modal_div").text("욕설확인중");
+                            $("#first_modal_div").text("욕설 확인 중.....");
                             sleep(3000);
                             if (filter2_result.status === "no") {
                                 $("#first_modal_div").text("발견된 욕설이 없습니다.");
@@ -112,7 +117,7 @@ $(document).ready(function () {
                                 contentType: "application/json",
                                 data: JSON.stringify({message: user_complaint}),
                                 success: function (filter3_result) {
-                                    console.log(filter3_result);
+                                    $("#first_modal_div").text("부적절한 표현 확인중.....");
                                     if (filter3_result.status === "no") {
                                         $("#first_modal_div").text("부적절한 표현이 없습니다. 결과를 표시해 드리겠습니다");
                                         $("#filteredMessage").val(user_complaint);
@@ -121,7 +126,7 @@ $(document).ready(function () {
                                         $(".filteredMessage").val(filter3_result.filteredMessage);
                                     }
                                     $('.modal_image').attr('src', 'https://item.kakaocdn.net/do/c5c470298d527ef65eb52883f0f186c48f324a0b9c48f77dbce3a43bd11ce785');
-                                    $("#first_modal_div").text("수정이 완료되었습니다. 수정 결과를 확인하여 주세요. 3초뒤 결과 화면으로 이동합니다.");
+                                    $("#first_modal_div").text("결과를 확인하여 주세요. 3초뒤 결과 화면으로 이동합니다.");
                                     setTimeout(function () {
                                         $("#first_modal").fadeOut();
                                         $(document.body).css({
