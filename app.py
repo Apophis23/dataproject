@@ -26,20 +26,24 @@ def get_filter3_result():
 
 # Filter 1 함수
 def filter1(user_complaint):
-    status = "yes"  # 예시 결과값
-    category = "환경"
-    return {"status": status, "category": category}
+    category_result = "농업_축산/기타/문의(질의)"
+    if category_result:
+        return {"status": "no", "category": category_result}
+    else:
+        return {"status": "no"}
 
 # Filter 2 함수
 def filter2(user_complaint):
-    status = "yes"  # 예시 결과값
-    return {"status": status}
+    state=0
+    if state == 0:
+        return {"status": "no"}
+    else:
+        return {"status": "yes"}
 
 # Filter 3 함수
 def filter3(user_complaint):
-    status = "yes"  # 예시 결과값
-    filtered_message = "부적절한 내용이 수정되었습니다."  # 예시 결과값
-    return {"status": status, "filteredMessage": filtered_message}
+    revised_text = "안녕하세요, 예천군 유기동물보호소를 운영하고 계신가요?"
+    return {"status": "yes", "filteredMessage": revised_text}
 
 if __name__ == '__main__':
     app.run(debug=True)
